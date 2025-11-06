@@ -1,14 +1,14 @@
 .footer {
     display: flex;
     margin-top: auto;
-    background: var(--light-layer-1);
+    background: var(--lt-layer-1);
 }
 .footer a {
     display: grid;
     place-items: center;
     flex-grow: 1;
-    border: 3px solid var(--light-layer-4);
-    outline: 1px dashed var(--light-layer-5);
+    border: 3px solid var(--lt-layer-4);
+    outline: 1px dashed var(--lt-layer-5);
     outline-offset: -5px;
     position: relative;
 }

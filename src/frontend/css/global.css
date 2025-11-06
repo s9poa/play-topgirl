@@ -4,29 +4,34 @@
     --default-txt-clr: #f0f0f0;
     --default-ff: "Lexend", sans-serif;
 
-    --light-layer-1: rgba(255,255,255,.0175);
-    --light-layer-2: rgba(255,255,255,.0275);
-    --light-layer-3: rgba(255,255,255,.0375);
-    --light-layer-4: rgba(255,255,255,.0475);
-    --light-layer-5: rgba(255,255,255,.0575);
-    --light-layer-6: rgba(255,255,255,.0675);
-    --light-layer-7: rgba(255,255,255,.0775);
-    --light-layer-8: rgba(255,255,255,.0875);
-    --light-layer-9: rgba(255,255,255,.0975);
+    --lt-layer-1: rgba(255,255,255,.0175);
+    --lt-layer-2: rgba(255,255,255,.0275);
+    --lt-layer-3: rgba(255,255,255,.0375);
+    --lt-layer-4: rgba(255,255,255,.0475);
+    --lt-layer-5: rgba(255,255,255,.0575);
+    --lt-layer-6: rgba(255,255,255,.0675);
+    --lt-layer-7: rgba(255,255,255,.0775);
+    --lt-layer-8: rgba(255,255,255,.0875);
+    --lt-layer-9: rgba(255,255,255,.0975);
 
-    --dark-layer-1: rgba(0,0,0,.175);
-    --dark-layer-2: rgba(0,0,0,.275);
-    --dark-layer-3: rgba(0,0,0,.375);
-    --dark-layer-4: rgba(0,0,0,.475);
-    --dark-layer-5: rgba(0,0,0,.575);
-    --dark-layer-6: rgba(0,0,0,.675);
-    --dark-layer-7: rgba(0,0,0,.775);
-    --dark-layer-8: rgba(0,0,0,.875);
-    --dark-layer-9: rgba(0,0,0,.975);
+    --dk-layer-1: rgba(0,0,0,.175);
+    --dk-layer-2: rgba(0,0,0,.275);
+    --dk-layer-3: rgba(0,0,0,.375);
+    --dk-layer-4: rgba(0,0,0,.475);
+    --dk-layer-5: rgba(0,0,0,.575);
+    --dk-layer-6: rgba(0,0,0,.675);
+    --dk-layer-7: rgba(0,0,0,.775);
+    --dk-layer-8: rgba(0,0,0,.875);
+    --dk-layer-9: rgba(0,0,0,.975);
 
     --transparent-primary-purple-1: hsla(249, 87%, 65%, .175);
     --primary-purple: hsl(249, 87%, 65%);
+
+    --transparent-accent-purple-1: hsla(249, 86%, 80%, .175);
     --accent-purple: hsl(249, 86%, 80%);
+
+    --dk-primary-purple: hsl(249, 87%, 45%);
+    --dk-accent-purple: hsl(249, 86%, 60%);
 }
 body {
     background: var(--body-bg);
@@ -43,6 +48,13 @@ body {
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
+}
+.scale-effect {
+    transition: transform .125s ease-in-out;
+}
+.scale-effect:hover,
+.scale-effect:active {
+    transform: scale(.925);
 }
 /* Styling Resets */
 *, *::before, *::after {
@@ -80,4 +92,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 #root, #__next {
     isolation: isolate;
+}
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }

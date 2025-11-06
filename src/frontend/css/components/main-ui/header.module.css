@@ -1,0 +1,67 @@
+.grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    overflow: hidden;
+    position: relative;
+}
+.grid::before,
+.grid::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+}
+.grid::before {
+    bottom: 0;
+    background: var(--transparent-primary-purple-1);
+    background-image: radial-gradient(var(--transparent-primary-purple-1) 1px, transparent 1px);
+    background-size: 5px 5px;
+    border: 2px solid var(--transparent-primary-purple-1);
+    outline: 1px dashed var(--transparent-accent-purple-1);
+    outline-offset: -4px;
+}
+.grid::after {
+    top: 0;
+    background: var(--body-bg);
+}
+/* .grid > * {
+    border: 1px solid red;
+} */
+.profileBtn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 1rem;
+    padding-bottom: 0;
+    position: relative;
+}
+.profileBtn::before,
+.profileBtn::after {
+    content: '';
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    height: 100%;
+    border-radius: 100vw;
+}
+.profileBtn::before {
+    background: var(--body-bg);
+    width: calc(40px + 1rem);
+    z-index: -1;
+}
+.profileBtn::after {
+    background-image: linear-gradient(to top, var(--transparent-primary-purple-1), var(--transparent-accent-purple-1));
+    width: calc(40px + 2rem);
+    z-index: -2;
+}
+.profileBtn img {
+    background-image: linear-gradient(to top right, var(--dk-primary-purple), var(--accent-purple));
+    border-radius: 100vw;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.profileStatContainer > * {
+    height: 50%;
+}
