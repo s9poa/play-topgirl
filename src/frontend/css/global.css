@@ -1,12 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 :root {
     --body-bg: hsl(240, 7%, 6%);
+    --default-txt-clr: #f0f0f0;
+    --default-ff: "Lexend", sans-serif;
+
+    --light-layer-1: rgba(255,255,255,.0175);
+    --light-layer-2: rgba(255,255,255,.0275);
+    --light-layer-3: rgba(255,255,255,.0375);
+    --light-layer-4: rgba(255,255,255,.0475);
+    --light-layer-5: rgba(255,255,255,.0575);
+    --light-layer-6: rgba(255,255,255,.0675);
+    --light-layer-7: rgba(255,255,255,.0775);
+    --light-layer-8: rgba(255,255,255,.0875);
+    --light-layer-9: rgba(255,255,255,.0975);
+
+    --dark-layer-1: rgba(0,0,0,.175);
+    --dark-layer-2: rgba(0,0,0,.275);
+    --dark-layer-3: rgba(0,0,0,.375);
+    --dark-layer-4: rgba(0,0,0,.475);
+    --dark-layer-5: rgba(0,0,0,.575);
+    --dark-layer-6: rgba(0,0,0,.675);
+    --dark-layer-7: rgba(0,0,0,.775);
+    --dark-layer-8: rgba(0,0,0,.875);
+    --dark-layer-9: rgba(0,0,0,.975);
+
+    --transparent-primary-purple-1: hsla(249, 87%, 65%, .175);
+    --primary-purple: hsl(249, 87%, 65%);
+    --accent-purple: hsl(249, 86%, 80%);
 }
 body {
     background: var(--body-bg);
 }
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+.a-very-important-tingy-ting {
+    -webkit-mask-image: linear-gradient(to right, transparent 0, black 2rem, black calc(100% - 2rem), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, black 2rem, black calc(100% - 2rem), transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
 /* Styling Resets */
 *, *::before, *::after {
     box-sizing: border-box;
+    color: var(--default-txt-clr);
+    font-family: var(--default-ff);
 }
 * {
     margin: 0;
