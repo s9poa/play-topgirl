@@ -4,6 +4,8 @@
     --default-txt-clr: #f0f0f0;
     --default-ff: "Lexend", sans-serif;
 
+    --bannana-yellow: #ffe28e;
+
     --lt-layer-1: rgba(255,255,255,.0175);
     --lt-layer-2: rgba(255,255,255,.0275);
     --lt-layer-3: rgba(255,255,255,.0375);
@@ -55,6 +57,15 @@ body {
 .scale-effect:hover,
 .scale-effect:active {
     transform: scale(.925);
+}
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    /* height: 7.5ex;
+    line-height: 2.5ex; */
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
 }
 /* Styling Resets */
 *, *::before, *::after {
