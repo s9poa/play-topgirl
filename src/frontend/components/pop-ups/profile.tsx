@@ -3,13 +3,17 @@ import { forwardRef } from 'react';
 
 type ProfilePopUpProps = {
     contentRef: React.Ref<HTMLDivElement>;
+    closingBtnRef: React.Ref<HTMLButtonElement>;
 }
 
-const ProfilePopUp = forwardRef<HTMLDivElement, ProfilePopUpProps>(({contentRef}, blurRef) => {
+const ProfilePopUp = forwardRef<HTMLDivElement, ProfilePopUpProps>(({contentRef, closingBtnRef}, blurRef) => {
     return (
     <div ref={blurRef} className={styles.blur}>
         <div ref={contentRef} className={styles.contentContainer}>
             <div className={styles.contentContainerOverflow}>
+            <div className={styles.closingHeader}>
+                <button ref={closingBtnRef} className={`${styles.closeProfilePopUpBtn} btnScalingEffect`}><span className={`txtOpacityEffect`}>Close Profile Details</span></button>
+            </div>
             <div className={styles.header}>
                 <div className={styles.infoTab}>
                     <span>Information</span>

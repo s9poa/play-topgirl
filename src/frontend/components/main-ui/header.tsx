@@ -7,6 +7,7 @@ import ProfilePopUp from '../pop-ups/profile';
 function MainUIHeader() {
     const blurRef = useRef<HTMLDivElement | null>(null)
     const contentRef = useRef<HTMLDivElement | null>(null)
+    const closingBtnRef = useRef<HTMLButtonElement | null>(null)
 
     useEffect(() => {
         const profileBtn = document.querySelector(`.${styles.profileBtn}`) as HTMLButtonElement
@@ -26,6 +27,15 @@ function MainUIHeader() {
                     setTimeout(() => {
                         blurRef.current!.style.visibility = 'hidden'
                     }, 175)
+                } else {
+                closingBtnRef.current!.addEventListener('click', () => {
+                        blurRef.current!.style.opacity = '0'
+                        contentRef.current!.style.transform = 'scale(0)'
+
+                        setTimeout(() => {
+                            blurRef.current!.style.visibility = 'hidden'
+                        }, 175)
+                    })
                 }
             })
         }
@@ -43,7 +53,7 @@ function MainUIHeader() {
                     </div>
                 </div>
             </div>
-            <ProfilePopUp ref={blurRef} contentRef={contentRef} />
+            <ProfilePopUp ref={blurRef} contentRef={contentRef} closingBtnRef={closingBtnRef} />
         </div>
     )
 }

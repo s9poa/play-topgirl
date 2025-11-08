@@ -44,12 +44,13 @@ body {
     margin: 0 auto;
 }
 .a-very-important-tingy-ting {
-    -webkit-mask-image: linear-gradient(to right, transparent 0, black 2rem, black calc(100% - 2rem), transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0, black 2rem, black calc(100% - 2rem), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0, black 50%, black calc(100% - 50%), transparent 100%), linear-gradient(to top, transparent 0, black 50%, black calc(100% - 50%), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, black 50%, black calc(100% - 50%), transparent 100%), linear-gradient(to top, transparent 0, black 50%, black calc(100% - 50%), transparent 100%);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
+    /* mask-composite: intersect; "Use for when you have 2 linear gradients applied" */ 
 }
 .scale-effect {
     transition: transform .125s ease-in-out;
@@ -66,6 +67,28 @@ body {
     line-height: 2.5ex; */
     -webkit-box-orient: vertical;  
     overflow: hidden;
+}
+.btnScalingEffect {
+    animation: 3s btnScalingEffect linear infinite;
+}
+.txtOpacityEffect {
+    animation: 3s txtOpacityEffect linear infinite;
+}
+@keyframes btnScalingEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.935);
+    }
+}
+@keyframes txtOpacityEffect {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .25;
+    }
 }
 /* Styling Resets */
 *, *::before, *::after {
