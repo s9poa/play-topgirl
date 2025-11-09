@@ -27,18 +27,17 @@ function MainUIHeader() {
                     setTimeout(() => {
                         blurRef.current!.style.visibility = 'hidden'
                     }, 175)
-                } else {
-                closingBtnRef.current!.addEventListener('click', () => {
-                        blurRef.current!.style.opacity = '0'
-                        contentRef.current!.style.transform = 'scale(0)'
-
-                        setTimeout(() => {
-                            blurRef.current!.style.visibility = 'hidden'
-                        }, 175)
-                    })
                 }
             })
         }
+        closingBtnRef.current!.addEventListener('click', () => {
+            blurRef.current!.style.opacity = '0'
+            contentRef.current!.style.transform = 'scale(0)'
+
+            setTimeout(() => {
+                blurRef.current!.style.visibility = 'hidden'
+            }, 175)
+        })
     }, [])
         
 
