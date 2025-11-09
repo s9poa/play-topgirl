@@ -86,7 +86,7 @@ const ProfilePopUp = forwardRef<HTMLDivElement, ProfilePopUpProps>(({contentRef,
                     </div>
                 </div>
                 <div className={styles.actionContainer}>
-                    <div>
+                    <div className={`normalScalingEffect`}>
                         <img src="/icons/daily-news-icon.webp" width="30" height="30" alt="" />
                         <span>Daily News</span>
                     </div>

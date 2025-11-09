@@ -27,6 +27,7 @@
     --dk-layer-9: rgba(0,0,0,.975);
 
     --transparent-primary-purple-1: hsla(249, 87%, 65%, .175);
+    --transparent-primary-purple-2: hsla(249, 87%, 65%, .275);
     --primary-purple: hsl(249, 87%, 65%);
 
     --transparent-accent-purple-1: hsla(249, 86%, 80%, .175);
@@ -50,7 +51,7 @@ body {
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
-    /* mask-composite: intersect; "Use for when you have 2 linear gradients applied" */ 
+    mask-composite: intersect;
 }
 .scale-effect {
     transition: transform .125s ease-in-out;
@@ -73,6 +74,17 @@ body {
 }
 .txtOpacityEffect {
     animation: 3s txtOpacityEffect linear infinite;
+}
+.normalScalingEffect {
+    animation: 3s normalScalingEffect linear infinite;
+}
+@keyframes normalScalingEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.9);
+    }
 }
 @keyframes btnScalingEffect {
     0% {
